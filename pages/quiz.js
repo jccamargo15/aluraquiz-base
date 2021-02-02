@@ -2,10 +2,10 @@
 import React from 'react';
 import db from '../db.json';
 import Widget from '../src/components/Widget';
-// import QuizLogo from '../src/components/QuizLogo';
+import QuizLogo from '../src/components/QuizLogo';
 import QuizBackground from '../src/components/QuizBackground';
-// import QuizContainer from '../src/components/QuizContainer';
-// import Button from '../src/components/Button';
+import QuizContainer from '../src/components/QuizContainer';
+import Button from '../src/components/Button';
 
 function LoadingWidget() {
   return (
@@ -68,7 +68,7 @@ function QuestionWidget({
                 htmlFor={alternativeId}
               >
                 <input
-                  // style={{ display: 'none' }}
+                  style={{ display: 'none' }}
                   id={alternativeId}
                   name={questionId}
                   type='radio'
