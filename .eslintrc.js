@@ -3,12 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: [
-    'plugin:react/recommended',
-    'airbnb',
-    'prettier',
-    'prettier/react',
-  ],
+  extends: ['plugin:react/recommended', 'airbnb', 'prettier', 'prettier/react'],
   parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
@@ -17,16 +12,17 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-  ],
+  plugins: ['react', 'react-hooks', 'import', 'prettier'],
   rules: {
+    quotes: [2, 'single'],
+    semi: [2, 'never'],
+    'comma-dangle': [2, 'only-multiline'],
+    'no-trailing-spaces': [2],
+    'jsx-quotes': ['error', 'prefer-single'],
+    'react/jsx-filename-extension': ['warn', { extensions: ['.js', '.jsx'] }],
+    'react/jsx-boolean-value': [0],
+    'react-hooks/rules-of-hooks': 'error',
     'prettier/prettier': 'error',
-    'react/jsx-filename-extension': [
-      'warn',
-      {extensions: ['.js', '.jsx']}
-    ],
-    'import/prefer-default-export': 'off',
-    'jsx-quotes': ['error', 'prefer-single']
-  }
-};
+    'space-before-function-paren': 0,
+  },
+}

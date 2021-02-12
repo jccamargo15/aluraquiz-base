@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 const InputBase = styled.input`
   width: 100%;
@@ -12,7 +12,7 @@ const InputBase = styled.input`
   border-radius: ${({ theme }) => theme.borderRadius};
   outline: 0;
   margin-bottom: 25px;
-`;
+`
 
 export default function Input({ onChange, placeholder, ...props }) {
   return (
@@ -24,16 +24,16 @@ export default function Input({ onChange, placeholder, ...props }) {
         {...props}
       />
     </div>
-  );
+  )
 }
 
 Input.defaultProps = {
   value: '',
-};
+}
 
 Input.propTypes = {
   onChange: PropTypes.func.isRequired,
   placeholder: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   value: PropTypes.string,
-};
+}
